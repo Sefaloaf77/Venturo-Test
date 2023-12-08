@@ -71,18 +71,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data['kategori'] as $kategori)
+                            @foreach ($data['kategori'] as $k)
                             <tr>
-                                <td class="table-secondary" colspan="14"><b>{{$kategori['kategori']}}</b></td>
+                                <td class="table-secondary" colspan="14"><b>{{$k['kategori']}}</b></td>
                             </tr>
-                            @foreach ($kategori['menu'] as $menu)
+                            @foreach ($k['menu'] as $menu)
                             <tr>
                                 <td>{{ $menu['nama'] }}</td>
-                                @for ($i = 1; $i <= 12; $i++) @php $filled=false; @endphp @foreach ($menu['bulan'] as
-                                    $key=> $bulan)
-                                    @if ($key == $i)
+                                @for ($i = 1; $i <= 12; $i++) @php $filled=false; @endphp @foreach ($menu['bulan'] as $k=> $b)
+                                    @if ($k == $i)
                                     <td style="text-align: right;">
-                                        {{ number_format($bulan['total']) }}
+                                        {{ number_format($b['total']) }}
                                     </td>
                                     @php
                                     $filled = true;
@@ -90,9 +89,9 @@
                                     @break
                                     @endif
                                     @endforeach
-
+                        
                                     @if (!$filled)
-                                    <td style="text-align: right;">
+                                    <td style="text-align: right;"> 
                                     </td>
                                     @endif
                                     @endfor
@@ -102,8 +101,8 @@
                             @endforeach
                             <tr class="table-dark">
                                 <td><b>Total</b></td>
-                                @for ($i = 1; $i <= 12; $i++) @php $filled=false; @endphp @foreach
-                                    ($data['trxBulan']['data'] as $k=> $valBulan)
+                                @for ($i = 1; $i <= 12; $i++) @php $filled=false; @endphp 
+                                @foreach ($data['trxBulan']['data'] as $k=> $valBulan)
                                     @if ($k == $i)
                                     <td style="text-align: right;">
                                         <b>{{ number_format($valBulan['total']) }}</b>
@@ -119,8 +118,7 @@
                                     </td>
                                     @endif
                                     @endfor
-                                    <td style="text-align: right;"><b>{{ number_format($data['trxBulan']['total'])
-                                            }}</b></td>
+                                    <td style="text-align: right;"><b>{{ number_format($data['trxBulan']['total']) }}</b></td>
                             </tr>
                         </tbody>
                     </table>

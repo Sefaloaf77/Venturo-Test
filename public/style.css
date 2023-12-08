@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+header{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  background-color: rgb(36, 36, 90);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .logo{
+  margin-left: 20px;
+}
+header img{
+  width: 100px;
+}
+
+header .header-text{
+  margin-left: 20px;
+  color: white;
+}
+
+.login {
+  position: absolute;
+  text-align: center;
+  height: 480px;
+  right: 100px;
+  margin-top: 60px;
+  width: 410px;
+  border-radius: 15px;
+  padding: 40px 20px;
+  background-color: white;
+}
+.main-login{
+  text-align: left;
+}
+.section-1 .login img{
+  width: 120px;
+}
+
+.section-1 .email p{
+  font-size: 15px;
+}
+
+.section-1 .email input{
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 85%;
+}
+
+.section-1 .password p{
+  font-size: 15px;
+}
+
+.section-1 .password input{
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 85%;
+}
+
+.section-1 .login-1 {
+  outline: none;
+  color: white;
+  text-align: center;
+  background-color: rgb(36, 36, 90);
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+}
+
+.section-1 .forgot{
+  text-align: center;
+}
